@@ -1,0 +1,120 @@
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+label {
+  width: 10rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #374151;
+}
+
+/* ===== Input ===== */
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  transition: all 0.2s ease;
+  color: #111827;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #22b8cf;
+  box-shadow: 0 0 0 2px rgba(34, 184, 207, 0.2);
+}
+
+.input:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ===== Lỗi ===== */
+.input.error {
+  border-color: #e03131 !important;
+  box-shadow: 0 0 0 1px rgba(224, 49, 49, 0.4);
+  animation: shake 0.25s ease-in-out;
+}
+
+.error-msg {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #e03131;
+  margin-top: 3px;
+}
+
+/* ===== Nút hành động ===== */
+.btn-action {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 10px;
+  background: #22b8cf;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.btn-action:hover {
+  background: #1098ad;
+}
+
+.btn-cancel {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f8f9fa;
+  color: #555;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.btn-cancel:hover {
+  background: #e9ecef;
+}
+
+/* ===== Hiệu ứng ===== */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-2px); }
+}
+
+/* Hiệu ứng toast trượt ra trượt vào */
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.4s ease;
+}
+
+.slide-fade-enter-from {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+/* Toast tổng thể */
+.toast {
+  background-color: #fff;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 12px 16px;
+  font-weight: 400; /* chữ thường, không đậm */
+  border-left-width: 4px;
+}
+
+.toast-success {
+  border-left-color: #22c55e; /* xanh lá */
+}
+
+.toast-error {
+  border-left-color: #ef4444; /* đỏ */
+}
